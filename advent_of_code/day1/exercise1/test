@@ -1,0 +1,8 @@
+#!/bin/bash
+if cmp --quiet <(cat $(pwd)/input | go run $(pwd)/exercise.go) $(pwd)/expected_output; then
+	echo "passes"
+	exit 0
+else
+	echo "fails"
+	exit 1
+fi
